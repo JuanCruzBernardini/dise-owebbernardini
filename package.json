@@ -1,0 +1,29 @@
+{
+  "name": "desniowebjuano",
+  "version": "1.0.0",
+  "description": "guitar players wiki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanCruzBernardini/preentrega3bernardini.git"
+  },
+  "keywords": [
+    "guitar",
+    "music",
+    "bands"
+  ],
+  "author": "juan bernardini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanCruzBernardini/preentrega3bernardini/issues"
+  },
+  "homepage": "https://github.com/JuanCruzBernardini/preentrega3bernardini#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

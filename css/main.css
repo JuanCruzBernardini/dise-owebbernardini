@@ -4332,6 +4332,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand {
+  color: white;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
@@ -8150,6 +8151,8 @@ fieldset:disabled .btn {
 }
 
 .lh-1 {
+  font-size: 200%;
+  font-family:Arial, Helvetica, sans-serif;
   line-height: 1 !important;
 }
 

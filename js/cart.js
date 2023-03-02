@@ -1,6 +1,7 @@
 const productoContenedor = document.getElementById('producto-contenedor');
 
 let carrito = [];
+const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
 productoContenedor.addEventListener('click', (e) => {
     if (e.target.classList.contains("agregar")) validarProductoEnCarrito(e.target.id)
@@ -58,6 +59,7 @@ const eliminarProductoCarrito = (productoId) => {
     carrito.splice(productoIndex, 1);
     pintarCarrito(carrito);
     actualizarTotalesCarrito(carrito);
+    
 };
 
 const actualizarTotalesCarrito = (carrito) => {
@@ -92,3 +94,14 @@ const cargarCarrito = () => {
         actualizarTotalesCarrito(carrito);
     };
 }
+const vaciarCarrito =() => {
+    // Limpiamos los productos guardados
+    carrito = [];
+    
+    
+    actualizarTotalesCarrito(carrito);
+    pintarCarrito(carrito);
+    // Borra LocalStorage
+    localStorage.clear();}
+    //eventos
+    DOMbotonVaciar.addEventListener('click', vaciarCarrito);

@@ -24,7 +24,10 @@
   },
   "homepage": "https://github.com/JuanCruzBernardini/preentrega3bernardinijc.git",
   "devDependencies": {
-    "sass":"1.56.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sass": "1.56.0"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.7.3"
   }
 }

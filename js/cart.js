@@ -1,7 +1,13 @@
+
+
+
+
 const productoContenedor = document.getElementById('producto-contenedor');
 
 let carrito = [];
+
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+
 
 productoContenedor.addEventListener('click', (e) => {
     if (e.target.classList.contains("agregar")) validarProductoEnCarrito(e.target.id)
@@ -55,11 +61,11 @@ const pintarCarrito = (carrito) => {
 };
 
 const eliminarProductoCarrito = (productoId) => {
-    const productoIndex = carrito.findIndex( producto => producto.id == productoId);
+    const productoIndex = carrito.findIndex(producto => producto.id == productoId);
     carrito.splice(productoIndex, 1);
     pintarCarrito(carrito);
     actualizarTotalesCarrito(carrito);
-    
+
 };
 
 const actualizarTotalesCarrito = (carrito) => {
@@ -94,14 +100,23 @@ const cargarCarrito = () => {
         actualizarTotalesCarrito(carrito);
     };
 }
-const vaciarCarrito =() => {
+const vaciarCarrito = () => {
     // Limpiamos los productos guardados
     carrito = [];
-    
-    
+
+
     actualizarTotalesCarrito(carrito);
     pintarCarrito(carrito);
+    
     // Borra LocalStorage
-    localStorage.clear();}
-    //eventos
-    DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+    localStorage.clear();
+}
+//eventos
+DOMbotonVaciar.addEventListener('click', vaciarCarrito,);
+DOMbotonVaciar.addEventListener(`click`, () =>{
+    Swal.fire({
+        icon: `success`,
+        title:`tu carrito se ha vaciado`
+        
+    })
+})
